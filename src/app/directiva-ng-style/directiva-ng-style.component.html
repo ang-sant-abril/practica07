@@ -1,0 +1,7 @@
+<div class="card l">
+    <h1>Ejemplo de directiva [ngStyle]</h1>
+    <hr>
+    <h2>Introduzca la puntuación</h2>
+    <input type="text"  [(ngModel)]="puntuacion">
+    <h2>La puntuación obtenida es <span [ngStyle]="{'color': getColor()}">{{puntuacion}}</span></h2>
+</div>

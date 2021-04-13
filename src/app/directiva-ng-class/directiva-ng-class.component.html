@@ -1,0 +1,16 @@
+<div class="card l">
+    <h1>Ejemplo de directiva [ngClass]</h1>
+    <hr>
+    <div *ngFor="let jugador of jugadores"> <!-- No podemos tener for e if en el mismo elemento-->
+        <div *ngIf="jugador.equipo !== undefined" class="caja-jugador" [ngClass]="jugador.equipo || 'sin-equipo'">
+            {{jugador.nombre}}
+        </div>
+        <div *ngIf="jugador.equipo === undefined" class="caja-jugador sin-equipo">
+            {{jugador.nombre}}
+        </div>
+    </div>
+    <!-- Opción con expresión Or => All credits to David Osorio-->
+    <div *ngFor="let jugador of jugadores" class="caja-jugador" [ngClass]="jugador.equipo || 'sin-equipo'">
+        {{jugador.nombre}}
+    </div>
+</div>
